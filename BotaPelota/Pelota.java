@@ -5,7 +5,7 @@ public class Pelota extends Actor {
     private int incx;
     private int incy;
     
-    public Pelota () {
+    public Pelota () { 
         incx = 10;
         incy = 10;
     }
@@ -22,7 +22,7 @@ public class Pelota extends Actor {
         
         World mundo = this.getWorld();
         if (nuevox > mundo.getWidth()) {      //Rebota lado derecho
-            incx = -incx;
+            incx = -incx; 
         }
         if (nuevoy > mundo.getHeight()) {     //Rebota en la parte de abajo
             incy = -incy;
@@ -35,5 +35,10 @@ public class Pelota extends Actor {
         }
         // Cambiamos de posicion a la pelota
         this.setLocation(nuevox, nuevoy);
+        /*
+        if (Greenfoot.mouseClicked(this)) {
+            Pelota pel = new Pelota();
+            
+        }*/
     }    
 }

@@ -9,9 +9,10 @@ public class Escenario extends World {
     @Override
     public void act () {
         if (Greenfoot.mouseClicked(this)) {
-            System.out.println("Click en el mundo");
             MouseInfo raton = Greenfoot.getMouseInfo();
-            System.out.println("Coordenadas x = " + raton.getX() + ", Coordenadas y = " + raton.getY());
+            Pelota pel = new Pelota();
+            addObject(pel, raton.getX(), raton.getY());
+            pel.act(); 
         }
     }
 }
