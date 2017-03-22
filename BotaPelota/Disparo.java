@@ -5,7 +5,7 @@ public class Disparo extends Actor {
     @Override
     public void act() {
         
-        this.setLocation(this.getX(), this.getY() - 10);
+        this.setLocation(this.getX(), this.getY() - 30);
         
          if (this.isTouching(Pelota.class)) {
             this.removeTouching(Pelota.class);
